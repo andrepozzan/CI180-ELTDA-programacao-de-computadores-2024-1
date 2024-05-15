@@ -20,7 +20,7 @@ int main()
     int xFinal, yFinal;
     cin >> xFinal >> yFinal;
 
-    while (xFinal != 0 && yFinal != 0)
+    while (xFinal != 0 || yFinal != 0)
     {
         float distancia;
 

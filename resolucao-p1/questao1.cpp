@@ -27,8 +27,8 @@ int main()
     int centena, dezena, unidade;
 
     unidade = n % 10;
-    dezena = ((n - unidade) % 100) / 10;
-    centena = (n - (dezena + unidade)) / 100;
+    dezena = (n % 100) / 10;
+    centena = n / 100;
 
     if (centena < dezena && dezena < unidade)
     {

@@ -1,5 +1,6 @@
 .vscode/
 .gitignore
+*.gitignore
 
 # Prerequisites
 *.d
