@@ -6,12 +6,10 @@ A disciplina contém duas provas e um exame final
 
 As resoluções dos exercícios estão nas pastas das respectivas provas
 
----
+Mais informações sobre a disciplina estão disponíveis em:  
 
-English
+https://www.inf.ufpr.br/ci208/
 
-These are the files I used to study computer programming for the electrical engineering course at UFPR.
+https://www.inf.ufpr.br/carmem/ci208/
 
-The course contains two exams and a final exam
-
-The solutions to the exercises are in the folders of the respective exams
+*by: André Corso Pozzan*

@@ -54,3 +54,6 @@ O programa deve terminar quando o usuário informar a coordenada $(0,0)$.
 ```
 
 Resolução disponível no arquivo `questao2.cpp`
+
+
+*by: André Corso Pozzan*

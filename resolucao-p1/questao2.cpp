@@ -1,7 +1,8 @@
 /*
-Calcule a distância entre uma coordenada
-inicial e as demais que o usuário irá digitar
-pare quando ele entrar com a coordenada 0,0
+Questão 2 P1
+
+Para mais informações leio o arquivo `README.md` na pasta `resolucao-p1`
+
 */
 
 #include <iostream>
@@ -33,3 +34,6 @@ int main()
 
     return 0;
 }
+/*by André C. Pozzan
+https://www.github.com/andrepozzan
+*/

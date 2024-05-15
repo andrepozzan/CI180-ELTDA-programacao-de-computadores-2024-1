@@ -1,7 +1,7 @@
 /*
 Questão 1 P1
 
-Para mais informações leio o arquivo `P1.md`
+Para mais informações leio o arquivo `README.md` na pasta `resolucao-p1`
 
 */
 
