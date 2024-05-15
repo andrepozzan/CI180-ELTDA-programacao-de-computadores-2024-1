@@ -1,11 +1,8 @@
 /*
 Questão 1 P1
 
-Detecte se um número de 3 algarismos é crescente:
+Para mais informações leio o arquivo `P1.md`
 
-Ex: 123 é crescente
-
-472 não é crescente
 */
 
 #include <iostream>
