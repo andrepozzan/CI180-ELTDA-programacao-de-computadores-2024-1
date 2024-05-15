@@ -13,38 +13,42 @@ cial.
 #include <cmath>
 using namespace std;
 
-int main(){
-  int n, raizN, primDez, segDez, uni, dez, cent, mil, dezRaiz, uniRaiz;
-  float raizNFloat;
+int main()
+{
+    int n, raizN, primDez, segDez, uni, dez, cent, mil, dezRaiz, uniRaiz;
+    float raizNFloat;
 
-  cout << "Digite um numero: ";
-  cin >> n;
-  if( n < 1000 || n > 9999 ){              
-    cout << "Numero nao tem 4 digitos\n";
+    cout << "Digite um numero: ";
+    cin >> n;
+    if (n < 1000 || n > 9999)
+    {
+        cout << "Numero nao tem 4 digitos\n";
+        return 0;
+    }
+    raizNFloat = sqrt(n);
+    raizN = raizNFloat;
+    if (raizNFloat - raizN != 0)
+    {
+        cout << n << " nao eh especial\n";
+        return 0;
+    }
+
+    primDez = n / 100;
+    segDez = n % 100;
+    if (raizN != primDez + segDez)
+    {
+        cout << n << " nao eh especial\n";
+        return 0;
+    }
+    uni = segDez % 10;
+    dez = segDez / 10;
+    cent = primDez % 10;
+    mil = primDez / 10;
+    dezRaiz = raizN / 10;
+    uniRaiz = raizN % 10;
+    if (dezRaiz + uniRaiz == mil + cent + dez + uni)
+        cout << n << " eh especial\n";
+    else
+        cout << n << " nao eh especial\n";
     return 0;
-  }
-  raizNFloat= sqrt( n );
-  raizN= raizNFloat;
-  if( raizNFloat - raizN != 0 ){
-    cout << n << " nao eh especial\n";
-    return 0;
-  }
-  
-  primDez= n / 100;
-  segDez= n % 100;
-  if( raizN != primDez+segDez ){
-    cout << n << " nao eh especial\n";
-    return 0;
-  }
-  uni= segDez%10;
-  dez= segDez/10;
-  cent= primDez%10;
-  mil= primDez/10;
-  dezRaiz= raizN/10;
-  uniRaiz= raizN%10;
-  if( dezRaiz+uniRaiz == mil+cent+dez+uni )
-    cout << n << " eh especial\n";
-  else
-    cout << n << " nao eh especial\n";
-  return 0;
 }

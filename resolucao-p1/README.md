@@ -32,7 +32,7 @@ Resolução disponível no arquivo `questao1.cpp`
 
 Faça um programa em C++ que peça ao usuário um par de coordenadas cartesianas $(x,y)$. Após esta entrada o programa deve obter do usuário uma sequência de pares de coordenadas, mostrando na tela a distância entre cada par e o par inicial de coordenadas.  
 O programa deve terminar quando o usuário informar a coordenada $(0,0)$.  
-**DICA:** A distância entre dois pontos $(x_1,y_1)$ e $(x_2,y_2)$ é dada por: $$D=\sqrt{((x_1-x_2)²) + ((y_1-y_2)²)}$$
+**DICA:** A distância entre dois pontos $(x_1,y_1)$ e $(x_2,y_2)$ é dada por: $$D=\sqrt{(x_1-x_2)² + (y_1-y_2)²}$$
 
 #### Exemplos de execuções:
 
@@ -55,5 +55,4 @@ O programa deve terminar quando o usuário informar a coordenada $(0,0)$.
 
 Resolução disponível no arquivo `questao2.cpp`
 
-
-*by: André Corso Pozzan*
+_by: André Corso Pozzan_
