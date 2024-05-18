@@ -4,43 +4,111 @@ Percorrendo vetores com funções
 */
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
-#define TAMANHO_MAXIMO_VETOR 5
-
-void leiaOVetor(int (&vetor)[])
+void leiaOVetor(int (&vetor)[], int tamanhoMaximo)
 {
     int contador = 0;
 
-    cout << "Entre com um elemento do vetor: ";
+    cout << "Entre com o elemento " << contador << " do vetor: ";
     cin >> vetor[contador];
 
-    while (vetor[contador] >= 0 && contador < TAMANHO_MAXIMO_VETOR - 1)
+    while (contador < tamanhoMaximo - 1)
     {
         contador++;
 
-        cout << "Entre com um elemento do vetor: ";
+        cout << "Entre com o elemento " << contador << " do vetor: ";
         cin >> vetor[contador];
     }
 }
 
-void imprimeOVetor(int vetor[])
+void imprimeOVetor(int vetor[], int tamanhoMaximo)
 {
     int contador = 0;
 
-    while (contador < TAMANHO_MAXIMO_VETOR)
+    cout << "Vetor = [ ";
+    while (contador < tamanhoMaximo)
     {
-        cout << vetor[contador] << " ";
+        if (contador + 1 == tamanhoMaximo)
+            cout << vetor[contador] << " ";
+        else
+            cout << vetor[contador] << ", ";
+
         contador++;
     }
+    cout << "]" << endl;
+}
+
+void produtoEscalar(int vetor1[], int vetor2[], int tamanhoMaximo)
+{
+    int produtoEscalar = 0;
+
+    for (int i = 0; i < tamanhoMaximo; i++)
+    {
+        produtoEscalar = produtoEscalar + vetor1[i] * vetor2[i];
+    }
+
+    cout << "O produto escalar é: " << produtoEscalar << endl;
+}
+
+void produtoVetorial(int vetor1[], int vetor2[], int tamanhoMaximo)
+{
+    if (tamanhoMaximo != 3)
+    {
+        cout << "Calcula só no R3" << endl;
+        return;
+    }
+
+    int i, j, k;
+
+    i = vetor1[1] * vetor2[2] - (vetor1[2] * vetor2[1]);
+
+    j = vetor1[2] * vetor2[0] - (vetor1[0] * vetor2[2]);
+
+    k = vetor1[0] * vetor2[1] - (vetor1[1] * vetor2[0]);
+
+    cout << "O produto vetorial é: [ " << i << ", " << j << ", " << k << " ]" << endl;
+}
+
+void somaVetores(int vetor1[], int vetor2[], int tamanhoMaximo)
+{
+    cout << "O vetor soma é : [ ";
+
+    for (int i = 0; i < tamanhoMaximo; i++)
+    {
+        if (i + 1 == tamanhoMaximo)
+            cout << vetor1[i] + vetor2[i] << " ";
+        else
+            cout << vetor1[i] + vetor2[i] << ", ";
+    }
+
+    cout << "]" << endl;
 }
 
 int main()
 {
-    int meuVetor[TAMANHO_MAXIMO_VETOR + 1];
+    int espacoVetorial = 0;
 
-    leiaOVetor(meuVetor);
+    cout << "Entre em qual espaço vetorial está trabalhando: ";
 
-    imprimeOVetor(meuVetor);
+    cin >> espacoVetorial;
+
+    int vetor1[espacoVetorial];
+    int vetor2[espacoVetorial];
+
+    leiaOVetor(vetor1, espacoVetorial);
+
+    imprimeOVetor(vetor1, espacoVetorial);
+
+    leiaOVetor(vetor2, espacoVetorial);
+
+    imprimeOVetor(vetor2, espacoVetorial);
+
+    produtoEscalar(vetor1, vetor2, espacoVetorial);
+
+    produtoVetorial(vetor1, vetor2, espacoVetorial);
+
+    somaVetores(vetor1, vetor2, espacoVetorial);
 }

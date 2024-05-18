@@ -5,7 +5,7 @@ Faça um programa que preencha dois vetores A e B de N posições com números r
 #include <iostream>
 using namespace std;
 
-#define N 5
+#define N 3
 
 int main(){
   float prodEscalar, A[N], B[N];
