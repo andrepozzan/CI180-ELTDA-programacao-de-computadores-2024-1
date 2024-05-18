@@ -72,16 +72,16 @@ void produtoVetorial(int vetor1[], int vetor2[], int tamanhoMaximo)
     cout << "O produto vetorial é: [ " << i << ", " << j << ", " << k << " ]" << endl;
 }
 
-void somaVetores(int vetor1[], int vetor2[], int tamanhoMaximo)
+void somaVetores(int vetor1[], int vetor2[], int tamanhoMaximo, int operacao)
 {
-    cout << "O vetor soma é : [ ";
+    cout << "Operação: " << operacao << " o vetor soma é : [ ";
 
     for (int i = 0; i < tamanhoMaximo; i++)
     {
         if (i + 1 == tamanhoMaximo)
-            cout << vetor1[i] + vetor2[i] << " ";
+            cout << vetor1[i] + vetor2[i] * operacao << " ";
         else
-            cout << vetor1[i] + vetor2[i] << ", ";
+            cout << vetor1[i] + vetor2[i] * operacao << ", ";
     }
 
     cout << "]" << endl;
@@ -110,5 +110,11 @@ int main()
 
     produtoVetorial(vetor1, vetor2, espacoVetorial);
 
-    somaVetores(vetor1, vetor2, espacoVetorial);
+    int operacao = 1;
+
+    cout << "Entre com a operação (1 = soma)(-1 = subtração): " << endl;
+
+    cin >> operacao;
+
+    somaVetores(vetor1, vetor2, espacoVetorial, operacao);
 }
