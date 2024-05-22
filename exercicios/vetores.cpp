@@ -82,7 +82,7 @@ void somaVetores(int vetor1[], int vetor2[], int tamanhoMaximo, int operacao)
 
     for (int i = 0; i < tamanhoMaximo; i++)
     {
-        vetorSoma[i] = vetor1[i] + vetor2[i] * operacao;
+        vetorSoma[i] = vetor1[i] + vetor2[i] * operacao; // Para subtrair multiplica por -1, para somar por 1
     }
     cout << "Operação " << operacao << " o vetor é :" << endl;
 
