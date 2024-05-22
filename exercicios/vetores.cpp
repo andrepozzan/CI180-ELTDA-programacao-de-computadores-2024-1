@@ -1,5 +1,10 @@
 /*
-Percorrendo vetores com funções
+Calculadora para vetores:
+
+Produto Escalar,
+Produto Vetorial(apenas no R3)
+
+Norma
 
 */
 
@@ -8,37 +13,33 @@ Percorrendo vetores com funções
 
 using namespace std;
 
-void leiaOVetor(int (&vetor)[], int tamanhoMaximo)
+void leiaOVetor(int vetor[], int tamanhoMaximo)
 {
-    int contador = 0;
+    cout << "Entre com os elementos do vetor no R" << tamanhoMaximo << ": ";
 
-    cout << "Entre com o elemento " << contador << " do vetor: ";
-    cin >> vetor[contador];
-
-    while (contador < tamanhoMaximo - 1)
-    {
-        contador++;
-
-        cout << "Entre com o elemento " << contador << " do vetor: ";
-        cin >> vetor[contador];
-    }
+    for (int i = 0; i < tamanhoMaximo; i++)
+        cin >> vetor[i];
 }
 
 void imprimeOVetor(int vetor[], int tamanhoMaximo)
 {
-    int contador = 0;
 
-    cout << "Vetor = [ ";
-    while (contador < tamanhoMaximo)
+    cout << endl
+         << "Vetor = [ ";
+
+    for (int i = 0; i < tamanhoMaximo; i++)
     {
-        if (contador + 1 == tamanhoMaximo)
-            cout << vetor[contador] << " ";
-        else
-            cout << vetor[contador] << ", ";
+        cout << vetor[i];
 
-        contador++;
+        /*Apenas para ajustar a visualização no terminal*/
+        if (i + 1 == tamanhoMaximo)
+            cout << " ";
+        else
+            cout << ", ";
     }
-    cout << "]" << endl;
+
+    cout << "]" << endl
+         << endl;
 }
 
 void produtoEscalar(int vetor1[], int vetor2[], int tamanhoMaximo)
@@ -50,7 +51,8 @@ void produtoEscalar(int vetor1[], int vetor2[], int tamanhoMaximo)
         produtoEscalar = produtoEscalar + vetor1[i] * vetor2[i];
     }
 
-    cout << "O produto escalar é: " << produtoEscalar << endl;
+    cout << "O produto escalar é: " << produtoEscalar << endl
+         << endl;
 }
 
 void produtoVetorial(int vetor1[], int vetor2[], int tamanhoMaximo)
@@ -61,39 +63,41 @@ void produtoVetorial(int vetor1[], int vetor2[], int tamanhoMaximo)
         return;
     }
 
-    int i, j, k;
+    int produtoVetorial[tamanhoMaximo];
 
-    i = vetor1[1] * vetor2[2] - (vetor1[2] * vetor2[1]);
+    produtoVetorial[0] = vetor1[1] * vetor2[2] - (vetor1[2] * vetor2[1]);
 
-    j = vetor1[2] * vetor2[0] - (vetor1[0] * vetor2[2]);
+    produtoVetorial[1] = vetor1[2] * vetor2[0] - (vetor1[0] * vetor2[2]);
 
-    k = vetor1[0] * vetor2[1] - (vetor1[1] * vetor2[0]);
+    produtoVetorial[2] = vetor1[0] * vetor2[1] - (vetor1[1] * vetor2[0]);
 
-    cout << "O produto vetorial é: [ " << i << ", " << j << ", " << k << " ]" << endl;
+    cout << "O produto vetorial é: " << endl;
+
+    imprimeOVetor(produtoVetorial, tamanhoMaximo);
 }
 
 void somaVetores(int vetor1[], int vetor2[], int tamanhoMaximo, int operacao)
 {
-    cout << "Operação: " << operacao << " o vetor soma é : [ ";
+    int vetorSoma[tamanhoMaximo];
 
     for (int i = 0; i < tamanhoMaximo; i++)
     {
-        if (i + 1 == tamanhoMaximo)
-            cout << vetor1[i] + vetor2[i] * operacao << " ";
-        else
-            cout << vetor1[i] + vetor2[i] * operacao << ", ";
+        vetorSoma[i] = vetor1[i] + vetor2[i] * operacao;
     }
+    cout << "Operação: " << operacao << " o vetor soma é :" << endl;
 
-    cout << "]" << endl;
+    imprimeOVetor(vetorSoma, tamanhoMaximo);
 }
 
 int main()
 {
-    int espacoVetorial = 0;
+    int espacoVetorial = 3;
 
-    cout << "Entre em qual espaço vetorial está trabalhando: ";
+    // Caso queira fazer alocação dinâmica:
 
-    cin >> espacoVetorial;
+    // cout << "Entre em qual espaço vetorial está trabalhando: ";
+
+    // cin >> espacoVetorial;
 
     int vetor1[espacoVetorial];
     int vetor2[espacoVetorial];
@@ -110,11 +114,11 @@ int main()
 
     produtoVetorial(vetor1, vetor2, espacoVetorial);
 
-    int operacao = 1;
+    int operacao = -1;
 
-    cout << "Entre com a operação (1 = soma)(-1 = subtração): " << endl;
+    // cout << "Entre com a operação (1 = soma)(-1 = subtração): " << endl;
 
-    cin >> operacao;
+    // cin >> operacao;
 
     somaVetores(vetor1, vetor2, espacoVetorial, operacao);
 }
