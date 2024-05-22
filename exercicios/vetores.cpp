@@ -84,9 +84,25 @@ void somaVetores(int vetor1[], int vetor2[], int tamanhoMaximo, int operacao)
     {
         vetorSoma[i] = vetor1[i] + vetor2[i] * operacao;
     }
-    cout << "Operação: " << operacao << " o vetor soma é :" << endl;
+    cout << "Operação " << operacao << " o vetor é :" << endl;
 
     imprimeOVetor(vetorSoma, tamanhoMaximo);
+}
+
+void normaDoVetor(int vetor[], int tamanhoMaximo)
+{
+
+    int somaDosQuadrados = 0;
+
+    for (int i = 0; i < tamanhoMaximo; i++)
+    {
+        somaDosQuadrados = somaDosQuadrados + pow(vetor[i], 2);
+    }
+
+    float normaDoVetor = sqrt(somaDosQuadrados);
+
+    cout << "A norma do vetor é: " << "sqrt de " << somaDosQuadrados << " = " << normaDoVetor << endl
+         << endl;
 }
 
 int main()
@@ -106,9 +122,17 @@ int main()
 
     imprimeOVetor(vetor1, espacoVetorial);
 
+    normaDoVetor(vetor1, espacoVetorial);
+
     leiaOVetor(vetor2, espacoVetorial);
 
     imprimeOVetor(vetor2, espacoVetorial);
+
+    normaDoVetor(vetor2, espacoVetorial);
+
+    cout
+        << "-----------" << endl
+        << endl;
 
     produtoEscalar(vetor1, vetor2, espacoVetorial);
 
