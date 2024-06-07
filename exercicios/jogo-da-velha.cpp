@@ -1,9 +1,9 @@
-/* Em desenvolvimento, o programa ainda apresenta erros!*/
-
+/*Em desenvolvimento, pode apresentar erros*/
 #include <iostream>
 
 using namespace std;
 
+/*Para tabuleiros maiores que 14, atualizar os caracteres dos jogadores*/
 #define TAMANHO_DO_TABULEIRO 3
 
 void zeraOTabuleiro(char tabuleiro[][TAMANHO_DO_TABULEIRO]);
@@ -21,8 +21,8 @@ int main()
     cout << "Jogo da Velha: " << TAMANHO_DO_TABULEIRO << "x" << TAMANHO_DO_TABULEIRO << endl;
     exibeTabuleiro(tabuleiro);
 
-    int quantidadeDeJogadores = 2;
-    char jogadores[quantidadeDeJogadores] = {'A', 'B'};
+    int quantidadeDeJogadores = TAMANHO_DO_TABULEIRO - 1;
+    char jogadores[quantidadeDeJogadores] = {'A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'};
 
     int vezDeJogar = 0;
 
@@ -136,29 +136,14 @@ bool verificaSeAlguemGanhou(char tabuleiro[][TAMANHO_DO_TABULEIRO])
         for (int j = 0; j < TAMANHO_DO_TABULEIRO; j++)
         {
 
-            if (tabuleiro[i][j] == tabuleiro[i + 1][j + 1] && tabuleiro[i][j] == tabuleiro[i + 2][j + 2] && tabuleiro[i][j] != ' ')
+            if (tabuleiro[i][j] != ' ' &&
+                ((tabuleiro[i][j] == tabuleiro[i + 1][j + 1] && tabuleiro[i][j] == tabuleiro[i + 2][j + 2] && tabuleiro[i][j] != ' ') ||
+                 (tabuleiro[i][j] == tabuleiro[i + 1][j - 1] && tabuleiro[i][j] == tabuleiro[i + 2][j - 2]) ||
+                 (tabuleiro[i][j] == tabuleiro[i][j + 1] && tabuleiro[i][j] == tabuleiro[i][j - 1]) ||
+                 (tabuleiro[i][j] == tabuleiro[i + 1][j] && tabuleiro[i][j] == tabuleiro[i - 1][j])))
             {
                 cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
-                return true;
-            }
 
-            if (tabuleiro[i][j] == tabuleiro[i + 1][j - 1] && tabuleiro[i][j] == tabuleiro[i + 2][j - 2] && tabuleiro[i][j] != ' ')
-            {
-                cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
-                return true;
-            }
-
-            /*Verifica as colunas*/
-            if (tabuleiro[i][j] == tabuleiro[i][j + 1] && tabuleiro[i][j] == tabuleiro[i][j - 1] && tabuleiro[i][j] != ' ')
-            {
-                cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
-                return true;
-            }
-
-            /*Verifica as linhas*/
-            if (tabuleiro[i][j] == tabuleiro[i + 1][j] && tabuleiro[i][j] == tabuleiro[i - 1][j] && tabuleiro[i][j] != ' ')
-            {
-                cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
                 return true;
             }
         }
