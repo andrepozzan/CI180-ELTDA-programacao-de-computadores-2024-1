@@ -48,8 +48,17 @@ void zeraOTabuleiro(char tabuleiro[][TAMANHO_DO_TABULEIRO])
 void exibeTabuleiro(char tabuleiro[][TAMANHO_DO_TABULEIRO])
 {
     cout << endl;
+
+    cout << "     ";
+    for (int j = 0; j < TAMANHO_DO_TABULEIRO; j++)
+    {
+        cout << "[" << j << "] ";
+    }
+
+    cout << endl;
     for (int i = 0; i < TAMANHO_DO_TABULEIRO; i++)
     {
+        cout << "[" << i << "]  ";
 
         for (int j = 0; j < TAMANHO_DO_TABULEIRO; j++)
         {
@@ -62,7 +71,7 @@ void exibeTabuleiro(char tabuleiro[][TAMANHO_DO_TABULEIRO])
 
         if (i + 1 < TAMANHO_DO_TABULEIRO)
         {
-
+            cout << "     ";
             for (int contador = 0; contador < TAMANHO_DO_TABULEIRO; contador++)
             {
                 cout << "----";
@@ -101,6 +110,8 @@ void pedeAJogada(char tabuleiro[][TAMANHO_DO_TABULEIRO], char jogadores[], int q
         cout << "Coordenada inválida" << endl;
         return;
     }
+
+    cout << endl;
 }
 
 void insereAJogada(char tabuleiro[][TAMANHO_DO_TABULEIRO], int coordX, int coordY, char jogador, int &vezDeJogar)
@@ -117,73 +128,34 @@ void insereAJogada(char tabuleiro[][TAMANHO_DO_TABULEIRO], int coordX, int coord
     }
 }
 
-void verificaAsDiagonais(char tabuleiro[][TAMANHO_DO_TABULEIRO], int x, int y)
-{
-
-    int xPositiva = x;
-    int yPositiva = y;
-    cout << "Diagonal positiva: ";
-
-    int pontuacaoPositiva = 1;
-    while (xPositiva < TAMANHO_DO_TABULEIRO && yPositiva < TAMANHO_DO_TABULEIRO)
-
-    {
-        cout << tabuleiro[xPositiva][yPositiva];
-        if (tabuleiro[xPositiva][yPositiva] == tabuleiro[xPositiva + 1][yPositiva + 1] && tabuleiro[xPositiva][yPositiva] != ' ')
-            pontuacaoPositiva++;
-
-        xPositiva++;
-        yPositiva++;
-    }
-    cout << endl
-         << "Pontuação: " << pontuacaoPositiva << " ";
-
-    int xNegativa = x;
-    int yNegativa = y;
-
-    cout << endl;
-
-    int pontuacaoNegativa = 1;
-
-    cout << "Diagonal negativa: ";
-    while (xNegativa < TAMANHO_DO_TABULEIRO && yNegativa >= 0)
-    {
-        cout << tabuleiro[xNegativa][yNegativa];
-
-        if (tabuleiro[xNegativa][yNegativa] == tabuleiro[xNegativa + 1][yNegativa - 1] && tabuleiro[xNegativa][yNegativa] != ' ')
-            pontuacaoNegativa++;
-
-        xNegativa++;
-        yNegativa--;
-    }
-
-    cout << endl
-         << "Pontuação: " << pontuacaoNegativa << " ";
-
-    cout << endl;
-
-    if (pontuacaoPositiva == 3 || pontuacaoNegativa > 3)
-    {
-        cout << "Alguém ganhou!" << endl;
-    }
-}
-
 bool verificaSeAlguemGanhou(char tabuleiro[][TAMANHO_DO_TABULEIRO])
 {
 
-    /*Linhas*/
     for (int i = 0; i < TAMANHO_DO_TABULEIRO; i++)
     {
         for (int j = 0; j < TAMANHO_DO_TABULEIRO; j++)
         {
-            verificaAsDiagonais(tabuleiro, i, j);
 
+            if (tabuleiro[i][j] == tabuleiro[i + 1][j + 1] && tabuleiro[i][j] == tabuleiro[i + 2][j + 2] && tabuleiro[i][j] != ' ')
+            {
+                cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
+                return true;
+            }
+
+            if (tabuleiro[i][j] == tabuleiro[i + 1][j - 1] && tabuleiro[i][j] == tabuleiro[i + 2][j - 2] && tabuleiro[i][j] != ' ')
+            {
+                cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
+                return true;
+            }
+
+            /*Verifica as colunas*/
             if (tabuleiro[i][j] == tabuleiro[i][j + 1] && tabuleiro[i][j] == tabuleiro[i][j - 1] && tabuleiro[i][j] != ' ')
             {
                 cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
                 return true;
             }
 
+            /*Verifica as linhas*/
             if (tabuleiro[i][j] == tabuleiro[i + 1][j] && tabuleiro[i][j] == tabuleiro[i - 1][j] && tabuleiro[i][j] != ' ')
             {
                 cout << "O jogardor " << tabuleiro[i][j] << " venceu!" << endl;
@@ -191,4 +163,6 @@ bool verificaSeAlguemGanhou(char tabuleiro[][TAMANHO_DO_TABULEIRO])
             }
         }
     }
+
+    return false;
 }
