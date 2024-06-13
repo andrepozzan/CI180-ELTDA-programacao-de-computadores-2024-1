@@ -81,7 +81,7 @@ _by: André Corso Pozzan_
 
 --- 
 
-### `~/exercícios`:
+### `~/exercicios`:
 Contém os exercícios realizados para revisar os conceitos das aulas
 
 #### Descrição dos arquivos:
