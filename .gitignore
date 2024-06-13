@@ -3,14 +3,6 @@
 .gitignore
 *.gitignore
 
-/[^\.]*
-*
-!/**/
-
-
-!*.*
-
-*.o
 
 # Prerequisites
 *.d
