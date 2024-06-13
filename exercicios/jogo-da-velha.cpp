@@ -4,7 +4,7 @@
 using namespace std;
 
 /*Para tabuleiros maiores que 14, atualizar os caracteres dos jogadores*/
-#define TAMANHO_DO_TABULEIRO 3
+#define TAMANHO_DO_TABULEIRO 4
 
 void zeraOTabuleiro(char tabuleiro[][TAMANHO_DO_TABULEIRO]);
 void exibeTabuleiro(char tabuleiro[][TAMANHO_DO_TABULEIRO]);
@@ -137,7 +137,7 @@ bool verificaSeAlguemGanhou(char tabuleiro[][TAMANHO_DO_TABULEIRO])
         {
 
             if (tabuleiro[i][j] != ' ' &&
-                ((tabuleiro[i][j] == tabuleiro[i + 1][j + 1] && tabuleiro[i][j] == tabuleiro[i + 2][j + 2] && tabuleiro[i][j] != ' ') ||
+                ((tabuleiro[i][j] == tabuleiro[i + 1][j + 1] && tabuleiro[i][j] == tabuleiro[i + 2][j + 2]) ||
                  (tabuleiro[i][j] == tabuleiro[i + 1][j - 1] && tabuleiro[i][j] == tabuleiro[i + 2][j - 2]) ||
                  (tabuleiro[i][j] == tabuleiro[i][j + 1] && tabuleiro[i][j] == tabuleiro[i][j - 1]) ||
                  (tabuleiro[i][j] == tabuleiro[i + 1][j] && tabuleiro[i][j] == tabuleiro[i - 1][j])))
