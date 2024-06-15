@@ -75,4 +75,6 @@ int main()
     maioresElementosDasColunas(m, vetor);
 
     imprimeVetor(vetor);
+
+    return 0;
 }

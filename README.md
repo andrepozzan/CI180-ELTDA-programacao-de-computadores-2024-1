@@ -1,6 +1,6 @@
-# CI180-ELTDA: Programação de Computadores Primeiro Semestre de 2024
+<h1 id="top"> CI180-ELTDA: Programação de Computadores Primeiro Semestre de 2024</h1>
 
-<h3 align="center">
+<h3 align="center" >
 Menu:<br>
 | <a href="#p1">Prova 1</a>
 | <a href="#exercicios">Exercícios</a>
@@ -15,19 +15,15 @@ A disciplina contém duas provas e um exame final
 
 As resoluções dos exercícios estão nas pastas das respectivas provas
 
-Mais informações sobre a disciplina estão disponíveis em:  
+Mais informações sobre a disciplina estão disponíveis em:
 
 https://www.inf.ufpr.br/ci208/
 
 https://www.inf.ufpr.br/carmem/ci208/
 
-
-
 <br><br><br>
 
-
 ---
-
 
 <h1 align="center" id="p1">Prova 1</h1>
 Contém as questões e exemplos de soluções da primeira prova da disciplina
@@ -87,11 +83,9 @@ O programa deve terminar quando o usuário informar a coordenada $(0,0)$.
 
 Resolução disponível no arquivo `resolucao-p1/questao2.cpp`
 
-
-
 <br><br><br>
 
---- 
+---
 
 <h1 align="center" id="exercicios">Exercícios</h1>
 Contém os exercícios realizados para revisar os conceitos das aulas
@@ -103,34 +97,69 @@ Contém os exercícios realizados para revisar os conceitos das aulas
 - Programa para manipulação de vetores como: soma, produto escalar, produto vetorial, utilizado como auxilio na resolução de exercícios de geometria analítica.
 
 ##### `exercicios/ordena.cpp`
+
 - Escreva um programa que leia uma sequencia de triplas. O programa deve escrever as triplas ordenadas. A sequencia termina quando forem digitados os valores 0 0 0. Para isso, crie uma função nome ordena que recebe 3 números inteiros A, B e C, e ordena os valores de forma que A passe a ter o menor valor e C o maior valor. Use a função troca() definida na vídeo-aula.
 
 ##### `exercicios/escalar.cpp`
+
 - Faça um programa que preencha dois vetores A e B de N posições com números reais (N definido via #define) e em seguida calcule e exiba na tela o produto escalar entre os dois vetores. O produto escalar entre dois vetores $(x, y)$ é dado por:
-$x0 y0 + x1 y1 + x2 y2 + x3 y3 + x4 y4 + x5 y5 + · · ·$
+  $x0 y0 + x1 y1 + x2 y2 + x3 y3 + x4 y4 + x5 y5 + · · ·$
 
 ##### `exercicios/aula-18-pares.cpp`
+
 - Escrever um programa que leia uma sequência de N valores inteiros (N definido via #define).
-Em seguida o programa deve escrever todos os valores pares e os elementos que formam sequencias metade-valor
-ou seja, valores consecutivos (n1,n2), onde n2 é o dobro de n1.
-    <br><br>Ex: N=6
-    5 3 6 12 7 5  
-    Pares:  
-    6 12  
-    Metade-valor:  
-    3 6  
-    6 12
+  Em seguida o programa deve escrever todos os valores pares e os elementos que formam sequencias metade-valor
+  ou seja, valores consecutivos (n1,n2), onde n2 é o dobro de n1.
+  <br><br>Ex: N=6
+  5 3 6 12 7 5  
+   Pares:  
+   6 12  
+   Metade-valor:  
+   3 6  
+   6 12
 
 ##### `exercicios/jogo-da-velha.cpp`
+
 - Implementação do jogo da velha com a adição de conseguir jogar com tabuleiros maiores e com mais jogadores, para alterar o tamanho do tabuleiro modifique o valor da constante `TAMANHO_DO_TABULEIRO`
 
-#### `revisao-p2/maxcols`
-- Faça um programa que leia do usuário uma matriz $N × M$ ($N$ e $M$ definidos via
-diretiva `#define` e preencha um vetor de $M$ elementos, tal que a posição $i$ do vetor contenha o maior valor da coluna $i$ da matriz. Ao final, o programa deve imprimir o vetor
+##### `revisao-p2/maxcols`
 
-#### `test`
-- test
+- Faça um programa que leia do usuário uma matriz $N × M$ ($N$ e $M$ definidos via
+  diretiva `#define` e preencha um vetor de $M$ elementos, tal que a posição $i$ do vetor contenha o maior valor da coluna $i$ da matriz. Ao final, o programa deve imprimir o vetor
+
+##### `revisao-p2/flipvert`
+
+- Faça um programa que leia do usuário uma matriz $N × M$ ($N$ e $M$ definidos via diretiva
+  `#define`), e altere a matriz lida invertendo a ordem dos elementos de cada coluna, imprimindo a
+  matriz resultante na tela. A inversão deve ser feita na própria matriz lida, sem auxílio de matrizes
+  auxiliares.
+
+##### `revisao-p2/segmento`
+
+- Crie uma função chamada `ehSegmento` que recebe como parâmetros os seguintes
+  itens: <br>um vetor de inteiros $a$, um vetor de inteiros $b$, um valor inteiro $n$ que representa o tamanho do
+  vetor $a$, um valor inteiro $m$ que representa o tamanho do vetor $b$, e um inteiro $p$ que representa uma
+  1
+  posição do vetor a. <br>A função deve retornar $1$ caso o vetor $b$ seja um segmento do vetor $a$ iniciado na
+  posição $p$ de $a$, ou retornar $0$ caso contrário.<br> Por exemplo, considere $p = 2$, e o vetor $a$ (com $n = 6$)<br>
+  6 5 4 3 8 9<br>
+  Se o vetor b (com m = 3) for<br>
+  4 3 8<br>
+  o retorno da função deve ser 1.<br>
+  Por outro lado, se o vetor b (com m = 3) for<br>
+  4 8 3<br>
+  o retorno da função deve ser 0.
+
+##### `example`
+
+- example
 
 ---
 
-*by: André Corso Pozzan*
+<h4 align="center">
+<a href="#top">Retornar ao topo</a>
+</h4>
+
+---
+
+_by: André Corso Pozzan_
