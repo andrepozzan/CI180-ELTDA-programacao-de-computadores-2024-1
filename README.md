@@ -123,6 +123,14 @@ ou seja, valores consecutivos (n1,n2), onde n2 é o dobro de n1.
 
 ##### `exercicios/jogo-da-velha.cpp`
 - Implementação do jogo da velha com a adição de conseguir jogar com tabuleiros maiores e com mais jogadores, para alterar o tamanho do tabuleiro modifique o valor da constante `TAMANHO_DO_TABULEIRO`
+
+#### `revisao-p2/maxcols`
+- Faça um programa que leia do usuário uma matriz $N × M$ ($N$ e $M$ definidos via
+diretiva `#define` e preencha um vetor de $M$ elementos, tal que a posição $i$ do vetor contenha o maior valor da coluna $i$ da matriz. Ao final, o programa deve imprimir o vetor
+
+#### `test`
+- test
+
 ---
 
 *by: André Corso Pozzan*
