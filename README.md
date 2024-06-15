@@ -155,37 +155,16 @@ Contém os exercícios realizados para revisar os conceitos das aulas
 - Dizemos que uma matriz inteira $A(n × n)$ é uma matriz de permutação se em cada
   linha e em cada coluna houver $n − 1$ elementos nulos e um único elemento igual a $1$. Dada uma
   matriz inteira $A(n × n)$ verificar se $A$ é de permutação. Exemplos:
-  $$
-  \begin{matrix}
-  0 & 1 & 0 & 0\\\
-  0 & 0 & 1 & 0\\\
-  1 & 0 & 0 & 0\\\
-  0 & 0 & 0 & 1\\\
-  \end{matrix}
-  $$
-  é de permutação, enquanto que:
-  $$
-  \begin{matrix}
-  0 & 1 & 0 & 0\\\
-  0 & 0 & 1 & 0\\\
-  1 & 0 & 0 & 0\\\
-  0 & 0 & 0 & 2\\\
-  \end{matrix}
-  $$
-  não é.
+  <br>
+  <img src="readme-images/image-2.png" width="200px">
 
 ##### `revisao-p2/lincolunas`
 
 - Dada uma matriz $A(n × m)$ imprimir o número de linhas e o número de colunas
-  nulas da matriz. Exemplo:
-  $$
-  \begin{matrix}
-    0 & 0 & 0 & 0\\\
-    1 & 0 & 2 & 2\\\
-    4 & 0 & 5 & 6\\\
-    0 & 0 & 0 & 2\\\
-    \end{matrix}
-  $$
+  nulas da matriz. Exemplo:<br>
+
+  <img src="readme-images/image.png" width="150px">
+  
   tem duas linhas nulas e uma coluna nulas.
 
 ##### `revisao-p2/quadradomagico`
@@ -193,8 +172,8 @@ Contém os exercícios realizados para revisar os conceitos das aulas
 - Dizemos que uma matriz quadrada inteira é um quadrado mágico se a soma
   dos elementos de cada linha, a soma dos elementos de cada coluna e a soma dos elementos das
   diagonais principal e secundária são todos iguais. Exemplo:<br>
-
-  $\begin{bmatrix} 8 & 0& 7 \\\ 4&5&6 \\\ 3&10&2 \end{bmatrix}$
+ 
+  <img src="readme-images/image-1.png" width="150px">
 
     <br>
     é um quadrado mágico pois
@@ -204,6 +183,14 @@ Contém os exercícios realizados para revisar os conceitos das aulas
     <br>
 
   Dada uma matriz quadrada $A(n × n)$, verificar se A é um quadrado mágico
+
+##### `revisao-p2/custotransp`
+- Os elementos $M [i, j]$ de uma matriz $M (n×n)$ representam os custos de transporte
+da cidade $i$ para a cidade $j$. Dados $n$ itinerários, cada um com $k$ cidades, calcular o custo total para
+cada itinerário. Exemplo:
+
+  ![alt text](readme-images/image-3.png)
+
 
 ##### `example`
 
