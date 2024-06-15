@@ -150,6 +150,44 @@ Contém os exercícios realizados para revisar os conceitos das aulas
   4 8 3<br>
   o retorno da função deve ser 0.
 
+##### `revisao-p2/matpermuta`
+
+- Dizemos que uma matriz inteira $A(n × n)$ é uma matriz de permutação se em cada
+  linha e em cada coluna houver $n − 1$ elementos nulos e um único elemento igual a $1$. Dada uma
+  matriz inteira $A(n × n)$ verificar se $A$ é de permutação. Exemplos:
+  $$
+  \begin{matrix}
+  0 & 1 & 0 & 0\\
+  0 & 0 & 1 & 0\\
+  1 & 0 & 0 & 0\\
+  0 & 0 & 0 & 1\\
+  \end{matrix}
+  $$
+  é de permutação, enquanto que: 
+  $$
+  \begin{matrix}
+  0 & 1 & 0 & 0\\
+  0 & 0 & 1 & 0\\
+  1 & 0 & 0 & 0\\
+  0 & 0 & 0 & 2\\
+  \end{matrix}
+  $$
+  não é.
+
+##### `revisao-p2/lincolunas`
+
+- Dada uma matriz $A(n × m)$ imprimir o número de linhas e o número de colunas
+nulas da matriz. Exemplo:
+  $$
+  \begin{matrix}
+    0 & 0 & 0 & 0\\
+    1 & 0 & 2 & 2\\
+    4 & 0 & 5 & 6\\
+    0 & 0 & 0 & 2\\
+    \end{matrix}
+  $$
+  tem duas linhas nulas e uma coluna nulas.
+
 ##### `example`
 
 - example
