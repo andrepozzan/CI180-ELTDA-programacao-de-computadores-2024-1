@@ -189,20 +189,20 @@ Contém os exercícios realizados para revisar os conceitos das aulas
   tem duas linhas nulas e uma coluna nulas.
 
 ##### `revisao-p2/quadradomagico`
+
 - Dizemos que uma matriz quadrada inteira é um quadrado mágico se a soma
-dos elementos de cada linha, a soma dos elementos de cada coluna e a soma dos elementos das
-diagonais principal e secundária são todos iguais. Exemplo:
-$$
-  \begin{matrix}
-    8 & 0 & 7\\\
-    4 & 5 & 6\\\
-    3 & 10 & 2\\\
-    \end{matrix}
-  $$
-  é um quadrado mágico pois
-  $$
-  8 + 0 + 7 = 4 + 5 + 6 = 3 + 10 + 2 = 8 + 4 + 3 = 0 + 5 + 10 = 7 + 6 + 2 = 8 + 5 + 2 = 3 + 5 + 7
-  $$
+  dos elementos de cada linha, a soma dos elementos de cada coluna e a soma dos elementos das
+  diagonais principal e secundária são todos iguais. Exemplo:<br>
+
+  $\begin{bmatrix} 8 & 0& 7 \\\ 4&5&6 \\\ 3&10&2 \end{bmatrix}$
+
+    <br>
+    é um quadrado mágico pois
+
+  $8 + 0 + 7 = 4 + 5 + 6 = 3 + 10 + 2 = 8 + 4 + 3 = 0 + 5 + 10 = 7 + 6 + 2 = 8 + 5 + 2 = 3 + 5 + 7$
+
+    <br>
+
   Dada uma matriz quadrada $A(n × n)$, verificar se A é um quadrado mágico
 
 ##### `example`
