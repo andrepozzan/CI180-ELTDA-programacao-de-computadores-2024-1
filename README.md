@@ -157,19 +157,19 @@ Contém os exercícios realizados para revisar os conceitos das aulas
   matriz inteira $A(n × n)$ verificar se $A$ é de permutação. Exemplos:
   $$
   \begin{matrix}
-  0 & 1 & 0 & 0\\
-  0 & 0 & 1 & 0\\
-  1 & 0 & 0 & 0\\
-  0 & 0 & 0 & 1\\
+  0 & 1 & 0 & 0\\\
+  0 & 0 & 1 & 0\\\
+  1 & 0 & 0 & 0\\\
+  0 & 0 & 0 & 1\\\
   \end{matrix}
   $$
-  é de permutação, enquanto que: 
+  é de permutação, enquanto que:
   $$
   \begin{matrix}
-  0 & 1 & 0 & 0\\
-  0 & 0 & 1 & 0\\
-  1 & 0 & 0 & 0\\
-  0 & 0 & 0 & 2\\
+  0 & 1 & 0 & 0\\\
+  0 & 0 & 1 & 0\\\
+  1 & 0 & 0 & 0\\\
+  0 & 0 & 0 & 2\\\
   \end{matrix}
   $$
   não é.
@@ -177,16 +177,33 @@ Contém os exercícios realizados para revisar os conceitos das aulas
 ##### `revisao-p2/lincolunas`
 
 - Dada uma matriz $A(n × m)$ imprimir o número de linhas e o número de colunas
-nulas da matriz. Exemplo:
+  nulas da matriz. Exemplo:
   $$
   \begin{matrix}
-    0 & 0 & 0 & 0\\
-    1 & 0 & 2 & 2\\
-    4 & 0 & 5 & 6\\
-    0 & 0 & 0 & 2\\
+    0 & 0 & 0 & 0\\\
+    1 & 0 & 2 & 2\\\
+    4 & 0 & 5 & 6\\\
+    0 & 0 & 0 & 2\\\
     \end{matrix}
   $$
   tem duas linhas nulas e uma coluna nulas.
+
+##### `revisao-p2/quadradomagico`
+- Dizemos que uma matriz quadrada inteira é um quadrado mágico se a soma
+dos elementos de cada linha, a soma dos elementos de cada coluna e a soma dos elementos das
+diagonais principal e secundária são todos iguais. Exemplo:
+$$
+  \begin{matrix}
+    8 & 0 & 7\\\
+    4 & 5 & 6\\\
+    3 & 10 & 2\\\
+    \end{matrix}
+  $$
+  é um quadrado mágico pois
+  $$
+  8 + 0 + 7 = 4 + 5 + 6 = 3 + 10 + 2 = 8 + 4 + 3 = 0 + 5 + 10 = 7 + 6 + 2 = 8 + 5 + 2 = 3 + 5 + 7
+  $$
+  Dada uma matriz quadrada $A(n × n)$, verificar se A é um quadrado mágico
 
 ##### `example`
 
