@@ -156,15 +156,27 @@ Contém os exercícios realizados para revisar os conceitos das aulas
   linha e em cada coluna houver $n − 1$ elementos nulos e um único elemento igual a $1$. Dada uma
   matriz inteira $A(n × n)$ verificar se $A$ é de permutação. Exemplos:
   <br>
-  <img src="readme-images/image-2.png" width="200px">
+
+  0 1 0 0<br>
+  0 0 1 0<br>
+  1 0 0 0<br>
+  0 0 0 1<br>
+  é de permutação, enquanto que:
+  0 1 0 0<br>
+  0 0 1 0<br>
+  1 0 0 0<br>
+  0 0 0 2<br>
+  não é.
 
 ##### `revisao-p2/lincolunas`
 
 - Dada uma matriz $A(n × m)$ imprimir o número de linhas e o número de colunas
   nulas da matriz. Exemplo:<br>
 
-  <img src="readme-images/image.png" width="150px">
-  
+  0 0 0 0<br>
+  1 0 2 2<br>
+  4 0 5 6<br>
+  0 0 0 0<br>
   tem duas linhas nulas e uma coluna nulas.
 
 ##### `revisao-p2/quadradomagico`
@@ -172,29 +184,57 @@ Contém os exercícios realizados para revisar os conceitos das aulas
 - Dizemos que uma matriz quadrada inteira é um quadrado mágico se a soma
   dos elementos de cada linha, a soma dos elementos de cada coluna e a soma dos elementos das
   diagonais principal e secundária são todos iguais. Exemplo:<br>
- 
-  <img src="readme-images/image-1.png" width="150px">
 
-    <br>
-    é um quadrado mágico pois
+  8 0 7<br>
+  4 5 6<br>
+  3 10 2<br>
+
+  é um quadrado mágico pois
 
   $8 + 0 + 7 = 4 + 5 + 6 = 3 + 10 + 2 = 8 + 4 + 3 = 0 + 5 + 10 = 7 + 6 + 2 = 8 + 5 + 2 = 3 + 5 + 7$
-
     <br>
 
   Dada uma matriz quadrada $A(n × n)$, verificar se A é um quadrado mágico
 
 ##### `revisao-p2/custotransp`
+
 - Os elementos $M [i, j]$ de uma matriz $M (n×n)$ representam os custos de transporte
-da cidade $i$ para a cidade $j$. Dados $n$ itinerários, cada um com $k$ cidades, calcular o custo total para
-cada itinerário. Exemplo:
+  da cidade $i$ para a cidade $j$. Dados $n$ itinerários, cada um com $k$ cidades, calcular o custo total para
+  cada itinerário. Exemplo:
 
-  ![alt text](readme-images/image-3.png)
+  4 1 2 3<br>
+  5 2 1 400<br>
+  2 1 3 8<br>
+  7 1 2 5<br>
 
+  O custo do itinerário 1 4 2 4 4 3 2 1 é:
+$M [1, 4]+M [4, 2]+M [2, 4]+M [4, 4]+M [4, 3]+M [3, 2]+M [2, 1] = 3+1+400+5+2+1+5 =
+417$.
 
-##### `example`
+##### `revisao-p2/itinerario`
 
-- example
+- Considere $N$ cidades numeradas de $1$ a $n$ que estão interligadas por uma série de es-
+tradas de mão única.<br> As ligações entre as cidades são representadas pelos elementos de uma matriz
+quadrada $L(n × n)$ cujos elementos $L_{ij}$ assumem o valor $1$ ou $0$ conforme exista ou não estrada
+direta que saia da cidade $i$ e chegue na cidade $j$.<br> Assim, os elementos da i-ésima linha indicam as
+estradas que saem da cidade $i$ e os elementos da j-ésima coluna indicam as estradas que chegam à
+cidade $j$.
+Por convenção, $L_{ii} = 1$. A figura abaixo ilustra um exemplo para $n = 4$:<br><br>
+1 1 1 0<br>
+0 1 1 0<br>
+1 0 1 1<br>
+0 0 1 1<br><br>
+a) Dado k, determinar quantas estradas saem e quantas chegam à cidade k.<br>
+b) A qual das cidades chega o maior número de estradas?<br><br>
+c) Dado k, verificar se todas as ligações diretas entre a cidade k e outras são de mão dupla.<br><br>
+d) Relacionar as cidades que possuem saídas diretas para a cidade k<br><br>
+e) Relacionar, se existirem:<br>
+• As cidades isoladas, isto é, as que não têm ligação com nenhuma outra<br>
+• As cidades das quais não há saída, apesar de haver entrada<br>
+• As cidades das quais há saída sem haver entrada<br><br>
+f) Dada uma seqüência de m inteiros cujos valores representam cidades e estão entre 1 e n, veri-
+ficar se é possível realizar o roteiro correspondente. No exemplo dado, o roteiro representado
+pela seqüência 3 4 3 2 1 (m = 5) é impossível
 
 ---
 
