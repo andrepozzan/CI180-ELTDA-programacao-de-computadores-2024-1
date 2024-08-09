@@ -138,7 +138,7 @@ Faça um programa em C++ que solicite ao usuário a entrada de uma matriz de dim
 Por fim, o programa deve exibir a matriz resultante.
 
 **DICA:** A média aritmética de quatro números \(a\), \(b\), \(c\) e \(d\) é dada por:
-$$ \text{Média} = \frac{a + b + c + d}{4} $$
+$$\text{Média} = \frac{a + b + c + d}{4}$$
 
 ##### Exemplo de Execução:
 
@@ -307,9 +307,9 @@ Contém os exercícios realizados para revisar os conceitos das aulas
   • As cidades isoladas, isto é, as que não têm ligação com nenhuma outra<br>
   • As cidades das quais não há saída, apesar de haver entrada<br>
   • As cidades das quais há saída sem haver entrada<br><br>
-  f) Dada uma seqüência de m inteiros cujos valores representam cidades e estão entre 1 e n, veri-
+  f) Dada uma sequência de m inteiros cujos valores representam cidades e estão entre 1 e n, veri-
   ficar se é possível realizar o roteiro correspondente. No exemplo dado, o roteiro representado
-  pela seqüência 3 4 3 2 1 (m = 5) é impossível
+  pela sequência 3 4 3 2 1 (m = 5) é impossível
 
 ---
 
