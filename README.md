@@ -1,5 +1,10 @@
 <h1 id="top"> CI180-ELTDA: Programação de Computadores Primeiro Semestre de 2024</h1>
 
+Meus contatos:
+
+<a href="https://www.instagram.com/andrepozzan.eng/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/andrepozzan/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+
 <h3 align="center" >
 Menu:<br>
 | <a href="#p1">Prova 1</a>
@@ -156,7 +161,6 @@ $$ \text{Média} = \frac{a + b + c + d}{4} $$
 Resolução disponível no arquivo `resolucao-p2/questao2.cpp`
 
 ---
-
 
 <h1 align="center" id="exercicios">Exercícios</h1>
 Contém os exercícios realizados para revisar os conceitos das aulas
