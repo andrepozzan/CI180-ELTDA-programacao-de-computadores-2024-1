@@ -3,6 +3,7 @@
 <h3 align="center" >
 Menu:<br>
 | <a href="#p1">Prova 1</a>
+| <a href="#p2">Prova 2</a>
 | <a href="#exercicios">Exercícios</a>
 |
 </h3>
@@ -86,6 +87,76 @@ Resolução disponível no arquivo `resolucao-p1/questao2.cpp`
 <br><br><br>
 
 ---
+
+<h1 align="center" id="p2">Prova 2</h1>
+Contém as questões e exemplos de soluções da segunda prova da disciplina
+
+#### Questão 1
+
+Faça um programa em C++ que solicite ao usuário a entrada de um vetor com 10 números reais. Após a entrada desse vetor, o programa deve obter do usuário uma sequência de números reais, que será processada para identificar o maior e o segundo maior número dessa sequência.
+
+Em seguida, o programa deve alterar o vetor da seguinte maneira:
+
+- Substitua cada elemento do vetor por `1` se ele for maior ou igual ao maior número da sequência.
+- Substitua cada elemento do vetor por `2` se ele for menor que o maior número e maior ou igual ao segundo maior número da sequência.
+- Substitua cada elemento do vetor por `0` se ele for menor que o segundo maior número da sequência.
+
+Por fim, o programa deve exibir o vetor resultante após as alterações. O programa deve terminar após a exibição do vetor.
+
+**DICA:** A sequência de números reais informada pelo usuário deve ser finalizada com o número `0`.
+
+##### Exemplo de Execução:
+
+```shell
+    Entre com o vetor de 10 números:
+    5.4 3.2 8.1 6.5 9.3 2.1 7.4 3.8 4.5 6.2
+
+    Entre com uma sequência terminada com zero:
+    10 5 7 2 0
+
+    Maior na sequência = 10
+    Segundo maior na sequência = 7
+
+    Vetor resultante:
+    0 0 2 0 2 0 2 0 0 0
+```
+
+Resolução disponível no arquivo `resolucao-p2/questao1.cpp`
+
+#### Questão 2
+
+Faça um programa em C++ que solicite ao usuário a entrada de uma matriz de dimensões 5x6 de números reais. O programa deve, então, calcular uma nova matriz resultante em que:
+
+- As bordas da matriz resultante serão preenchidas com zeros.
+- Os elementos internos (não pertencentes à borda) da matriz resultante serão calculados como a média aritmética dos quatro elementos adjacentes na matriz original (esquerda, direita, acima, abaixo).
+
+Por fim, o programa deve exibir a matriz resultante.
+
+**DICA:** A média aritmética de quatro números \(a\), \(b\), \(c\) e \(d\) é dada por:
+$$ \text{Média} = \frac{a + b + c + d}{4} $$
+
+##### Exemplo de Execução:
+
+```shell
+    Entre com uma matriz 5x6:
+    1  2  3  4  5  6
+    7  8  9  10 11 12
+    13 14 15 16 17 18
+    19 20 21 22 23 24
+    25 26 27 28 29 30
+
+    Matriz resultante:
+    0  0  0  0  0  0
+    0  8  9  10 11 0
+    0  14 15 16 17 0
+    0  20 21 22 23 0
+    0  0  0  0  0  0
+```
+
+Resolução disponível no arquivo `resolucao-p2/questao2.cpp`
+
+---
+
 
 <h1 align="center" id="exercicios">Exercícios</h1>
 Contém os exercícios realizados para revisar os conceitos das aulas
@@ -192,7 +263,7 @@ Contém os exercícios realizados para revisar os conceitos das aulas
   é um quadrado mágico pois
 
   $8 + 0 + 7 = 4 + 5 + 6 = 3 + 10 + 2 = 8 + 4 + 3 = 0 + 5 + 10 = 7 + 6 + 2 = 8 + 5 + 2 = 3 + 5 + 7$
-    <br>
+  <br>
 
   Dada uma matriz quadrada $A(n × n)$, verificar se A é um quadrado mágico
 
@@ -208,33 +279,33 @@ Contém os exercícios realizados para revisar os conceitos das aulas
   7 1 2 5<br>
 
   O custo do itinerário 1 4 2 4 4 3 2 1 é:
-$M [1, 4]+M [4, 2]+M [2, 4]+M [4, 4]+M [4, 3]+M [3, 2]+M [2, 1] = 3+1+400+5+2+1+5 =
+  $M [1, 4]+M [4, 2]+M [2, 4]+M [4, 4]+M [4, 3]+M [3, 2]+M [2, 1] = 3+1+400+5+2+1+5 =
 417$.
 
 ##### `revisao-p2/itinerario`
 
 - Considere $N$ cidades numeradas de $1$ a $n$ que estão interligadas por uma série de es-
-tradas de mão única.<br> As ligações entre as cidades são representadas pelos elementos de uma matriz
-quadrada $L(n × n)$ cujos elementos $L_{ij}$ assumem o valor $1$ ou $0$ conforme exista ou não estrada
-direta que saia da cidade $i$ e chegue na cidade $j$.<br> Assim, os elementos da i-ésima linha indicam as
-estradas que saem da cidade $i$ e os elementos da j-ésima coluna indicam as estradas que chegam à
-cidade $j$.
-Por convenção, $L_{ii} = 1$. A figura abaixo ilustra um exemplo para $n = 4$:<br><br>
-1 1 1 0<br>
-0 1 1 0<br>
-1 0 1 1<br>
-0 0 1 1<br><br>
-a) Dado k, determinar quantas estradas saem e quantas chegam à cidade k.<br>
-b) A qual das cidades chega o maior número de estradas?<br><br>
-c) Dado k, verificar se todas as ligações diretas entre a cidade k e outras são de mão dupla.<br><br>
-d) Relacionar as cidades que possuem saídas diretas para a cidade k<br><br>
-e) Relacionar, se existirem:<br>
-• As cidades isoladas, isto é, as que não têm ligação com nenhuma outra<br>
-• As cidades das quais não há saída, apesar de haver entrada<br>
-• As cidades das quais há saída sem haver entrada<br><br>
-f) Dada uma seqüência de m inteiros cujos valores representam cidades e estão entre 1 e n, veri-
-ficar se é possível realizar o roteiro correspondente. No exemplo dado, o roteiro representado
-pela seqüência 3 4 3 2 1 (m = 5) é impossível
+  tradas de mão única.<br> As ligações entre as cidades são representadas pelos elementos de uma matriz
+  quadrada $L(n × n)$ cujos elementos $L_{ij}$ assumem o valor $1$ ou $0$ conforme exista ou não estrada
+  direta que saia da cidade $i$ e chegue na cidade $j$.<br> Assim, os elementos da i-ésima linha indicam as
+  estradas que saem da cidade $i$ e os elementos da j-ésima coluna indicam as estradas que chegam à
+  cidade $j$.
+  Por convenção, $L_{ii} = 1$. A figura abaixo ilustra um exemplo para $n = 4$:<br><br>
+  1 1 1 0<br>
+  0 1 1 0<br>
+  1 0 1 1<br>
+  0 0 1 1<br><br>
+  a) Dado k, determinar quantas estradas saem e quantas chegam à cidade k.<br>
+  b) A qual das cidades chega o maior número de estradas?<br><br>
+  c) Dado k, verificar se todas as ligações diretas entre a cidade k e outras são de mão dupla.<br><br>
+  d) Relacionar as cidades que possuem saídas diretas para a cidade k<br><br>
+  e) Relacionar, se existirem:<br>
+  • As cidades isoladas, isto é, as que não têm ligação com nenhuma outra<br>
+  • As cidades das quais não há saída, apesar de haver entrada<br>
+  • As cidades das quais há saída sem haver entrada<br><br>
+  f) Dada uma seqüência de m inteiros cujos valores representam cidades e estão entre 1 e n, veri-
+  ficar se é possível realizar o roteiro correspondente. No exemplo dado, o roteiro representado
+  pela seqüência 3 4 3 2 1 (m = 5) é impossível
 
 ---
 
